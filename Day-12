@@ -1,0 +1,21 @@
+//Задание 1
+//Сгенерировать массив из 100 случайных чисел и отсортировать его всеми известными вам методами.
+import Foundation
+func randomArray (_ n: Int) -> [Int] {
+    return (0..<n).map {
+        _ in .random(in: 1...100)
+    }
+}
+print(randomArray(100))
+var randArray = randomArray(100)
+var sortedArray = randArray.sorted()
+print(sortedArray)
+
+//Задание 2
+//Написать две функции: перевод из десятичной системы в шестнадцатеричную и обратно.
+func decHec(n: Int) -> String {
+    let hec = String(n, radix: 2)
+    print("Перевод числа из 10й базы в 16ю: \(hec)")
+    return hec
+}
+var hec = decHec(n: 36484)
